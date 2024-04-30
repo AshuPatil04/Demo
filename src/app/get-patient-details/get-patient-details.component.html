@@ -1,0 +1,141 @@
+<!-- <div class="form-container">
+    <form [formGroup]="patientForm" (ngSubmit)="getPatient()">
+      <mat-form-field appearance="outline">
+        <mat-label>Patient ID or Mobile *</mat-label>
+        <input matInput formControlName="patientIdOrMobile" placeholder="Enter patient ID or mobile number">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Get Patient</button>
+    </form>
+  </div>
+   -->
+   <!-- <div class="form-container">
+    <form [formGroup]="patientForm" (ngSubmit)="getPatient()">
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="patientId" placeholder="Enter patient ID">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="mobile" placeholder="Enter mobile number">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div> -->
+  
+<!-- <nav mat-tab-nav-bar>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="toggleDrawer()">
+          <h1>eVitalRX</h1>
+        </button>
+      <span class="fill-space"></span>
+      <div class="middle-section">
+        <div fxHide.lt-sm fxShow.gt-sm>
+          <button mat-button>Menu</button>
+          <button mat-button>About</button>
+          <button mat-button>Contact Us</button>
+          <button mat-button>Support</button>
+        </div>
+      </div>
+      <span class="fill-space"></span>
+      <button mat-button color="primary" [routerLink]="['/login']">Login</button>
+     
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav> -->
+
+<!-- <div class="sidebar" *ngIf="isSidebarOpen"> -->
+ 
+<!-- <app-footer></app-footer> -->
+
+
+<nav mat-tab-nav-bar>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <div class="header">
+        <h1>eVitalRX</h1>
+        <button mat-icon-button (click)="toggleDrawer()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      
+      <!-- <button mat-icon-button (click)="toggleDrawer()">
+        <h1>eVitalRX</h1>
+          <mat-icon>menu</mat-icon>
+          
+        </button> -->
+      <span class="fill-space"></span>
+      <div class="middle-section">
+        <div fxHide.lt-sm fxShow.gt-sm>
+          <button mat-button>Menu</button>
+          <button mat-button>About</button>
+          <button mat-button>Contact Us</button>
+          <button mat-button>Support</button>
+        </div>
+      </div>
+      <span class="fill-space"></span>
+      <button mat-button color="primary" [routerLink]="['/login']">Login</button>
+     
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <div class="sidebar-header">
+    <h3>eVitalRX</h3>
+    <button mat-icon-button (click)="toggleDrawer()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <ul class="sidebar-menu">
+    <li>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    </li>
+    <li>
+      <!-- <a routerLink="/get-patient" routerLinkActive="active">Get Patient</a> -->
+
+    </li>
+    <li>
+      <a routerLink="/add-patient" routerLinkActive="active">Add Patient</a>
+      
+    </li>
+
+  </ul>
+</div>
+  <div class="form-container">
+    <form [formGroup]="patientForm" (ngSubmit)="getPatient()" class="form">
+      <mat-form-field appearance="outline" class="form-field">
+        <input matInput formControlName="patientId" placeholder="Enter patient ID" class="input-field">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-field">
+        <input matInput formControlName="mobile" placeholder="Enter mobile number" class="input-field">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>
+  
+
+  <div *ngIf="patients.length > 0; else noData" class="patient-table">
+    <h1>Patient Details</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Mobile</th>
+          <th>Patient ID</th>
+          <th>Zip Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients">
+          <td>{{ patient.firstname }}</td>
+          <td>{{ patient.lastname }}</td>
+          <td>{{ patient.mobile }}</td>
+          <td>{{ patient.patient_id }}</td>
+          <td>{{ patient.zipcode }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noData>
+    <p class="no-data-message">No data available.</p>
+  </ng-template>
+  

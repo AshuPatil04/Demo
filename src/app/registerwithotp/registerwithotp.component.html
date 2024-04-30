@@ -1,0 +1,56 @@
+<mat-card>
+    <mat-card-header>
+    
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="registerForm" class="signup-form">
+        <div class="form-title">
+          <h2>Signup Using Otp</h2>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput formControlName="mobile" placeholder="Mobile Number">
+          <mat-error *ngIf="registerForm.controls['mobile'].hasError('required')">Mobile Number is required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstname" placeholder="First Name">
+          <mat-error *ngIf="registerForm.controls['firstname'].hasError('required')">First Name is required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastname" placeholder="Last Name">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>OTP</mat-label>
+          <input matInput formControlName="otp" placeholder="OTP">
+          <mat-error *ngIf="registerForm.controls['otp'].hasError('required')">OTP is required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" placeholder="Password">
+          <mat-error *ngIf="registerForm.controls['password'].hasError('required')">Password is required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Operating System</mat-label>
+          <input matInput formControlName="os" placeholder="Operating System" disabled>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Zipcode</mat-label>
+          <input matInput formControlName="zipcode" placeholder="Zipcode">
+          <mat-error *ngIf="registerForm.controls['zipcode'].hasError('minlength') || registerForm.controls['zipcode'].hasError('maxlength')">Zipcode must be 6 characters long</mat-error>
+        </mat-form-field>
+  
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" (click)="registerWithOTP()">Sign Up</button>
+          </div>
+              
+      </form>
+    </mat-card-content>
+</mat-card>

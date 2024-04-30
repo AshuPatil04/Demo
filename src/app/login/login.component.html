@@ -1,0 +1,29 @@
+<!-- login.component.html -->
+<app-header></app-header>
+<div class="login-container">
+
+<form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+    <div class="login-form-title">Login</div>
+    <mat-form-field appearance="fill">
+      <mat-label>Mobile Number</mat-label>
+      <input matInput formControlName="mobileNumber" placeholder="Mobile Number">
+      <mat-error *ngIf="loginForm.controls['mobileNumber'].hasError('required')">Mobile Number is required</mat-error>
+      <mat-error *ngIf="loginForm.controls['mobileNumber'].hasError('pattern')">Invalid Mobile Number</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password" placeholder="Password">
+      <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Password is required</mat-error>
+      <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')">Password must be at least 6 characters long</mat-error>
+    </mat-form-field>
+  
+   
+    <button mat-raised-button color="primary" type="submit">Login</button>
+    <br><br>
+  
+    <button mat-raised-button color="primary" type="submit" [routerLink]="['/signup']">signup</button>
+
+</form>
+</div>
+<app-footer></app-footer>

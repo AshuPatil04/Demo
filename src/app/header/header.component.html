@@ -1,0 +1,25 @@
+
+<nav mat-tab-nav-bar>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <div class="header">
+        <h1>eVitalRX</h1>
+       
+      </div>
+      
+     
+      <span class="fill-space"></span>
+      <div class="middle-section">
+        <div fxHide.lt-sm fxShow.gt-sm>
+          <button mat-button>Menu</button>
+          <button mat-button>About</button>
+          <button mat-button>Contact Us</button>
+          <button mat-button>Support</button>
+        </div>
+      </div>
+      <span class="fill-space"></span>
+      <button mat-button color="primary" [routerLink]="['/login']">Login</button>
+     
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>

@@ -1,0 +1,49 @@
+/* login.component.css */
+.login-form {
+    max-width: 400px;
+
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+  }
+  .login-container {
+    background-image: url('/src/assets/images/images.jpg');
+    background-size: cover; /* Adjusts the background image size */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Adjusts the height of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form {
+    background-color: #ffffff; /* Add a background color */
+    padding: 20px; /* Add padding to the form */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+}
+.login-form-title {
+    text-align: center; /* Center the title */
+    font-size: 24px; /* Adjust the font size */
+    margin-bottom: 20px; /* Add space below the title */
+}
+.mat-mdc-form-field.ng-tns-c1205077789-0.mat-mdc-form-field-type-mat-input.mat-form-field-appearance-fill.mat-form-field-hide-placeholder.mat-primary.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted {
+    width: 360px; /* Adjust the width as needed */
+    
+  }
+
+  .mat-mdc-form-field.ng-tns-c1205077789-1.mat-mdc-form-field-type-mat-input.mat-form-field-appearance-fill.mat-form-field-hide-placeholder.mat-primary.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted {
+    /* Add your CSS styles here */
+    width: 360px;
+    /* Other styles */
+  }
+  

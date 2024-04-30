@@ -1,0 +1,52 @@
+.signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-card {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  .mat-mdc-form-field.ng-tns-c1205077789-0.mat-mdc-form-field-type-mat-input.mat-form-field-appearance-fill.mat-form-field-hide-placeholder.mat-primary.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted {
+    width: 360px !important; /* Adjust the width as needed */
+    
+  }
+
+  .mat-mdc-form-field.ng-tns-c1205077789-1.mat-mdc-form-field-type-mat-input.mat-form-field-appearance-fill.mat-form-field-hide-placeholder.mat-primary.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted {
+    /* Add your CSS styles here */
+    width: 360px !important;
+    /* Other styles */
+  }
+  .mat-mdc-form-field.mat-mdc-form-field-type-mat-input.mat-form-field-appearance-fill.mat-form-field-hide-placeholder.mat-primary.ng-untouched.ng-pristine.ng-valid.ng-star-inserted {
+    width: 360px !important;  }
+    .mat-mdc-form-field.ng-tns-c1205077789-3.mat-mdc-form-field-type-mat-input.mat-form-field-appearance-fill.mat-form-field-hide-placeholder.mat-primary.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted {
+        width: 360px !important;
+      }
+      .mat-mdc-form-field.ng-tns-c1205077789-4.mat-mdc-form-field-type-mat-input.mat-form-field-appearance-fill.mat-form-field-hide-placeholder.mat-primary.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted {
+        width: 360px !important;
+      }
+      .mat-mdc-form-field.ng-tns-c1205077789-5.mat-mdc-form-field-type-mat-input.mat-form-field-appearance-fill.mat-primary.ng-untouched.ng-pristine.ng-valid.ng-star-inserted {
+        width: 360px !important;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Adjust margin as needed */
+      }
+      .mat-mdc-form-field.ng-tns-c1205077789-6.mat-mdc-form-field-type-mat-input.mat-form-field-appearance-fill.mat-form-field-hide-placeholder.mat-primary.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted {
+        width: 360px !important;
+      }
+      
